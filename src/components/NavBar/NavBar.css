@@ -1,0 +1,25 @@
+.navBar-items li{
+    text-decoration: none;
+}
+
+nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo{
+    max-width: 70px;
+    height: 70px;
+}
+
+.navBar-items{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.container-logo{
+    display: flex;
+}
