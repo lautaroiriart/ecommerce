@@ -3,6 +3,7 @@ import './NavBar.css';
 import logo from '../../vela-icon.svg';
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
+import CartWidget from '../CartWidget/CartWidget';
 
 
 export default function NavBar() {
@@ -20,6 +21,7 @@ export default function NavBar() {
                     <li><Button color="inherit">Quienes somos</Button></li>
                     <li><Button color="inherit">Contacto</Button></li>
                 </ul>
+                <CartWidget/>
             </nav>
         </AppBar>
     )
