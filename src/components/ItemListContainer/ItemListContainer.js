@@ -1,7 +1,8 @@
 import { dividerClasses } from "@mui/material";
 import Item from '../Item/Item';
+import ItemCount from '../ItemCount/ItemCount';
 
-const ListItems= ()=> {
+const ItemListContainer= ()=> {
     const dataProducts = [
         {
             nombre:'Vela con aroma a citricos',
@@ -24,7 +25,10 @@ const ListItems= ()=> {
         <h2>Productos destacados</h2>
             {dataProducts.map((productos)=>{
                 return(
-                    <Item  nombre={productos.nombre} precio={productos.precio} stock={productos.stock}/>
+                    <div>
+                        <Item  nombre={productos.nombre} precio={productos.precio} stock={productos.stock}/>
+                        <ItemCount stock={productos.stock}/>
+                    </div>
                 )
             })}
         </div>
@@ -32,4 +36,4 @@ const ListItems= ()=> {
     )
 }
 
-export default ListItems;
+export default ItemListContainer;
