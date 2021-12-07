@@ -20,8 +20,11 @@ export default function AddProducts({stock}) {
     return (
         <div>
             <h1>{itemCount}</h1>
-            <button onClick={addItem}>+</button>
+
             <button onClick={removeItem}>-</button>
+            <button onClick={addItem}>+</button>
+            <br/>
+            <button>Agregar al carrito</button>
         </div>
     )
 }
