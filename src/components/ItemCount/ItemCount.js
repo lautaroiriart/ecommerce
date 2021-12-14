@@ -1,5 +1,4 @@
-import React, { useState,useEffect } from 'react'
-import ItemListContainer from '../ItemListContainer/ItemListContainer'
+import React, { useState,} from 'react'
 
 export default function AddProducts({stock}) {
 

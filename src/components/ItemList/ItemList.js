@@ -1,9 +1,9 @@
-import { dividerClasses } from "@mui/material";
 import { useEffect, useState } from "react";
 import Item from '../Item/Item';
 import ItemCount from '../ItemCount/ItemCount';
 import CircularProgress from '@mui/material/CircularProgress';
 import Grid from '@mui/material/Grid';
+import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
 
 
 const ItemList= ()=> {
@@ -60,9 +60,12 @@ const ItemList= ()=> {
                         <Item  nombre={product.nombre} precio={product.precio} stock={product.stock} pictureUrl={product.pictureUrl}/>
                         <ItemCount stock={product.stock}/>
                         </Grid>
+
                     </div>
+
                 )
             })}
+            <ItemDetailContainer/>
         </div>
 
     )
