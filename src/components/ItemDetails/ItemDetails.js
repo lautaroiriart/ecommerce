@@ -6,7 +6,7 @@ export default function ItemDetail({ data }) {
     return (
         <div>
             <div>
-                <img src={`${data.img}`} alt="product image" />
+                <img src={`../../assets/${data.img}`} alt="product image" />
             </div>
             <span>Nombre: {data.nombre}</span>
             <p>Stock: {data.stock}</p>

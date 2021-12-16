@@ -56,9 +56,10 @@ const ItemList= ()=> {
                 return(
 
                     <div >  
+                        
                         <Grid key={product.id}>
-                        <Item  nombre={product.nombre} precio={product.precio} stock={product.stock} pictureUrl={product.pictureUrl}/>
-                        <ItemCount stock={product.stock}/>
+                                <Item  nombre={product.nombre} precio={product.precio} stock={product.stock} pictureUrl={product.pictureUrl}/>
+                                <ItemCount stock={product.stock}/>
                         </Grid>
 
                     </div>

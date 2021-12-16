@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import ItemDetail from '../ItemDetails/ItemDetails'
+import { useParams, Link } from 'react-router-dom'
 
 export default function ItemDetailContainer() {
 
@@ -28,7 +29,9 @@ export default function ItemDetailContainer() {
 
     return (
         <div>
-            <ItemDetail data={product}/>
+            <Link to={`/item/${product.id}`} >
+                 <ItemDetail data={product}/>
+            </Link>
         </div>
     )
 }
