@@ -1,10 +1,11 @@
-const Item = ({id,nombre,precio,stock}) => {
+import React from 'react'
+
+const Item = ({id,nombre,precio,stock,}) => {
     return(
         <div>
-            <p>ID: {id} </p>
+            <img src={`../../assets/vela${id}.jpg`} alt="product"></img>
             <p>Nombre: {nombre}</p>
             <p>Precio: {precio}</p>
-            <p>Stock: {stock}</p>
         </div>
     )
 }

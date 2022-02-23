@@ -2,7 +2,6 @@ import React from "react";
 import './NavBar.css';
 import logo from '../../vela-icon.svg';
 import AppBar from '@mui/material/AppBar';
-import Button from '@mui/material/Button';
 import CartWidget from '../CartWidget/CartWidget';
 import {Link} from 'react-router-dom'
 
@@ -13,24 +12,24 @@ export default function NavBar() {
         <AppBar position="static">
             <nav>
                 <div className="container-logo">
-                    <img src={logo} className="logo"/>
+                    <img src={logo} className="logo" alt="logo"/>
                     <h1>Velas</h1>
                 </div>
                 <ul className="navBar-items">
                     <Link to="/">
-                    <li><Button color="inherit">Home</Button></li>
+                    <li>Home</li>
                     </Link>
 
                     <Link to="">
-                    <li><Button color="inherit">Productos</Button></li>
+                    <li>Productos</li>
                     </Link>
 
                     <Link to="/category/about">
-                    <li><Button color="inherit">Quienes somos</Button></li>
+                    <li>Quienes somos</li>
                     </Link>
 
                     <Link to="/category/contact">
-                    <li><Button color="inherit">Contacto</Button></li>
+                    <li>Contacto</li>
                     </Link>
                 </ul>
                 <CartWidget/>

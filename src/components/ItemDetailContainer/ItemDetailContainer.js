@@ -1,37 +1,35 @@
 import React, {useEffect, useState} from 'react'
 import ItemDetail from '../ItemDetails/ItemDetails'
-import { useParams, Link } from 'react-router-dom'
+import {useParams,  Link } from 'react-router-dom'
+import { productosBaseDeDatos } from '../../datos/ProductosBaseDeDatos';
 
 export default function ItemDetailContainer() {
+    const {id}= useParams();
+    const [product, setProduct] = useState([]);
+    console.log('id recibido', id)
 
-    const [product, setProduct] = useState([])
-    const dataProduct =
-        {
-            id: '1',
-            nombre:'Vela samira',
-            precio: 1000,
-            stock:2,
-            img: 'vela2.jpg' ,
-            detail: 'Vela de forma cuadrada, con olor a citricos'
-        }
+    const getProductDB = (nombreProducto) => { 
+        return new Promise ((resolve, reject) =>{
 
-    const getProduct = new Promise ((resolve, reject) =>{
+        const arregloProductosBaseDeDatos = productosBaseDeDatos;
+        const productoElegido = arregloProductosBaseDeDatos.find((elemento)=>elemento.id === nombreProducto)
+
         setTimeout( () => {
-            resolve(dataProduct)
+            resolve(productoElegido)
         }, 2000)
     })
+    }
     
     useEffect( () => {
-        getProduct.then((data) => {
-            setProduct (data)
-        })
-    }, [])
+        const getProduct = async(id) => {
+            const response = await getProductDB (id);
+            setProduct(response)
+        }
+        getProduct(id);
+    }, [id])
 
     return (
-        <div>
-            <Link to={`/item/${product.id}`} >
-                 <ItemDetail data={product}/>
-            </Link>
-        </div>
+        <ItemDetail  data = {product}  />
     )
+    
 }
