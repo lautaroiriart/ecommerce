@@ -3,7 +3,6 @@ import Item from '../Item/Item';
 import ItemCount from '../ItemCount/ItemCount';
 import CircularProgress from '@mui/material/CircularProgress';
 import Grid from '@mui/material/Grid';
-import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
 import {Link} from 'react-router-dom'
 import { productosBaseDeDatos } from "../../datos/ProductosBaseDeDatos";
 
