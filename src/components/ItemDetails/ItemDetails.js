@@ -15,8 +15,6 @@ export default function ItemDetail({ data }) {
             setConfirmarCompra(true)
         }
     }
-
-    console.log (data)
     return (
         <div>
             <div>
@@ -26,7 +24,7 @@ export default function ItemDetail({ data }) {
             <p>Stock: {data.stock}</p>
             <p>Precio: {data.precio}</p>
             <p>Descripcion: {data.description}</p>
-            <ItemCount stock={data.stock} onAdd={(cantidadProductosCount)=>agregarProductos(cantidadProductosCount)}  compra={(confirmacion)=>confirmacionCompra(confirmacion)}/>  
+            <ItemCount data = {data}/>  
         </div>
     )
 }

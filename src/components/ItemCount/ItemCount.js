@@ -1,11 +1,16 @@
-import React, { useState,} from 'react'
+import React, { useContext, useState,} from 'react';
+import { cartContext } from '../../context/cartContext';
 
-export default function AddProducts({stock, onAdd, compra}) {
+
+export default function AddProducts({data}) {
+
+
+    const {cartCount, addItemCart, cartItems} = useContext(cartContext);
 
     const [itemCount, setItemCount] = useState(0)
 
     const addItem = () => {
-        if(itemCount < stock){
+        if(itemCount < data.stock){
             setItemCount(itemCount + 1)
         }
         
@@ -27,8 +32,7 @@ export default function AddProducts({stock, onAdd, compra}) {
         <h1>{itemCount}</h1>
         <button onClick={removeItem}>-</button>
         <button onClick={addItem}>+</button>
-        <br/>
-        <button onClick={()=>onAdd(itemCount)}>Agregar al carrito</button>
+        <button onClick={()=>addItemCart(data.nombre, itemCount)}>Agregar al carrito</button>
         </> 
     )
 }

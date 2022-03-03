@@ -24,8 +24,8 @@ export default function NavBar() {
                     <li>Productos</li>
                     </Link>
 
-                    <Link to="/category/about">
-                    <li>Quienes somos</li>
+                    <Link to="/cart">
+                    <li>Carrito</li>
                     </Link>
 
                     <Link to="/category/contact">

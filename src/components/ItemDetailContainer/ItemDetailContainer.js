@@ -1,12 +1,11 @@
-import React, {useEffect, useState} from 'react'
-import ItemDetail from '../ItemDetails/ItemDetails'
-import {useParams,  Link } from 'react-router-dom'
+import React, {useEffect, useState} from 'react';
+import ItemDetail from '../ItemDetails/ItemDetails';
+import {useParams} from 'react-router-dom';
 import { productosBaseDeDatos } from '../../datos/ProductosBaseDeDatos';
 
 export default function ItemDetailContainer() {
     const {id}= useParams();
     const [product, setProduct] = useState([]);
-    console.log('id recibido', id)
 
     const getProductDB = (nombreProducto) => { 
         return new Promise ((resolve, reject) =>{
@@ -30,6 +29,7 @@ export default function ItemDetailContainer() {
 
     return (
         <ItemDetail  data = {product}  />
+        
     )
     
 }
